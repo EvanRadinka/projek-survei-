@@ -8,8 +8,8 @@
     <nav class="flex-1 p-4 space-y-2">
         <a href="{{ route('dashboard') }}" class="block p-2 rounded hover:bg-white hover:text-black">Beranda</a>
         <a href="{{ route('survei') }}" class="block p-2 rounded hover:bg-white hover:text-black">Survei Kepuasan</a>
-        <a href="#" class="block p-2 rounded hover:bg-white hover:text-black">Data Pelayanan</a>
-        <a href="#" class="block p-2 rounded hover:bg-white hover:text-black">Data Bansos</a>
+        <a href="{{ route('data-pelayanan') }}" class="block p-2 rounded hover:bg-white hover:text-black">Data Pelayanan</a>
+        <a href="{{ route('data-bansos') }}" class="block p-2 rounded hover:bg-white hover:text-black">Data Bansos</a>
     </nav>
 
     <div class="p-4 border-t border-gray-700">

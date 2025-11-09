@@ -8,6 +8,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/data-pelayanan', [App\Http\Controllers\DataPelayananController::class, 'index'])->middleware(['auth', 'verified'])->name('data-pelayanan');
+Route::get('/data-bansos', [App\Http\Controllers\DataBansosController::class, 'index'])->middleware(['auth', 'verified'])->name('data-bansos');
+Route::post('/data-bansos', [App\Http\Controllers\DataBansosController::class, 'store'])->middleware(['auth', 'verified'])->name('data-bansos.store');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -15,12 +15,12 @@
             </div>
 
             <div class="bg-amber-300 rounded-xl shadow p-6 text-center h-32 flex flex-col justify-center">
-                <div class="text-4xl font-bold text-black mb-2">{{ $totalSurveys }}</div>
-                <p class="text-xl font-semibold text-black">Jumlah Pelayanan</p>
+                <div class="text-4xl font-bold text-black mb-2">{{ $todaySurveys }}</div>
+                <p class="text-xl font-semibold text-black">Jumlah Pelayanan Hari Ini</p>
             </div>
 
             <div class="bg-amber-300 rounded-xl shadow p-6 text-center h-32 flex flex-col justify-center">
-                <div class="text-4xl font-bold text-black mb-2">15</div>
+                <div class="text-4xl font-bold text-black mb-2">{{ $totalBansosRecipients }}</div>
                 <p class="text-xl font-semibold text-black">Jumlah Penerima Bansos</p>
             </div>
         </div>
@@ -28,9 +28,9 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="mt-6">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-amber-300 border-b border-gray-200">
-                        <h3 class="text-lg font-semibold">Grafik Penerima Bansos dan Jumlah Pelayanan</h3>
+                        <h3 class="text-lg font-semibold">Grafik Survei Kepuasan Mingguan</h3>
                         <div id="bansosChart" style="width: 100%; height: 500px;"></div>
                     </div>
                 </div>
@@ -61,8 +61,10 @@
 
             var options = {
                 title: 'Penerima Bansos dan Jumlah Pelayanan',
-                hAxis: {title: 'Bulan',  titleTextStyle: {color: '#333'}},
-                vAxis: {minValue: 0}
+                hAxis: {title: 'Minggu',  titleTextStyle: {color: '#333'}},
+                vAxis: {minValue: 0},
+                legend: { position: 'bottom' },
+                colors: ['#fbbf24', '#f59e0b']
             };
 
             var chart = new google.visualization.AreaChart(document.getElementById('bansosChart'));
